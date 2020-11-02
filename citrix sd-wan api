@@ -1,0 +1,170 @@
+1.	login sd-wan：
+Post https://220.248.101.x/sdwan/nitro/v1/config/login
+
+{"login": {
+      "username": "admin",
+      "password": "xxxx"
+    }
+}
+
+return value：
+ 
+
+2.	config package：
+Post https://220.248.101.x/sdwan/nitro/v1/config/config_packages
+
+{"config_packages": {
+      "package_name": "test1"
+    }
+}
+
+return value：
+ 
+
+3. Config Site：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config_editor/sites
+
+{"sites": {
+      "site_location":"shanghai",
+      "model":"cb2100",
+      "mode":"primary_mcn",
+      "package_name":"test1",
+      "site_name":"shanghai"
+    }
+}
+
+return value：
+ 
+
+4.	config interface group：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config_editor/interface_groups
+
+{"interface_groups": {
+      "eth_interfaces":["1/2"],
+      "package_name":"test1",
+      "bypass_mode":"fail_to_block",
+      "security":"trusted",
+      "site_name":"shanghai",
+      "virtual_interfaces":[
+     {
+      "name":"wan",
+      "routing_domain":"",
+      "vlan_id":"0"
+     }]
+    }
+}
+
+return value：
+ 
+
+5.	config virtual ip：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses
+
+{"virtual_ip_addresses": {
+      "virtual_interface_name":"wan",
+      "ip_address":"1.1.1.1/24",
+      "site_name":"shanghai",
+      "is_identity":"true",
+      "package_name":"test1"
+    }
+}
+
+return value：
+ 
+
+6.	show virtual ip：
+
+Get https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1
+
+return value：
+
+ 
+7.	delete virtual ip：
+
+Delete https://220.248.101.51/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1,id=917
+
+return value：
+ 
+
+8.	config wan link：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config_editor/wan_links
+
+{"wan_links": {
+         "wan_link_name":"shanghai-internet",
+         "site_name":"shanghai",
+         "package_name":"test1",
+         "access_type":"public_internet",
+         "lan_to_wan_physical_rate":"10000",
+         "wan_to_lan_physical_rate":"10000",
+         "public_ip":"222.222.222.222",
+         "enable_public_ip_learning":"false",
+         "access_interfaces": [{
+         "name":"Shanghai-Office",
+         "virtual_interface_name":"wan",
+         "virtual_ip_addr":"1.1.1.1",
+         "gw_ip_addr":"1.1.1.2",
+         "conduit_mode":"primary",
+         "gateway_mac_addr_binding":"true"}]
+    }
+}
+
+return value：
+ 
+
+9.	config static route：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config_editor/routes
+
+{"routes": {
+      "network_ip_address":"10.0.0.0/24",
+      "cost":"5",
+      "site_name":"shanghai",
+      "gateway_ip_addr":"10.0.0.254",
+      "package_name":"test1",
+      "routing_domain":"Default_RoutingDomain",
+      "service_type":"local"
+      }
+}
+
+return value：
+ 
+
+10.	export config：
+
+Post https://220.248.101.x/sdwan/nitro/v1/config/config_package_export
+
+{"config_package_export": {
+      "package_name":"test1"
+      }
+}
+
+return value：
+
+11.	verify config：
+
+Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=verify
+
+{ 
+    "change_management": {}
+}
+
+12.	change management config：
+
+Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=stage
+
+{ 
+    "change_management": {}
+}
+
+13.	activate config：
+
+Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=activate
+
+{ 
+    "change_management": {}
+}
+
