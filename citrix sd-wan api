@@ -1,5 +1,5 @@
 1.	login sd-wan：
-Post https://220.248.101.x/sdwan/nitro/v1/config/login
+Post https://220.x.101.x/sdwan/nitro/v1/config/login
 
 {"login": {
       "username": "admin",
@@ -11,7 +11,7 @@ return value：
 ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/1.png)
 
 2.	config package：
-Post https://220.248.101.x/sdwan/nitro/v1/config/config_packages
+Post https://220.x.101.x/sdwan/nitro/v1/config/config_packages
 
 {"config_packages": {
       "package_name": "test1"
@@ -23,7 +23,7 @@ return value：
 
 3. Config Site：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config_editor/sites
+Post https://220.x.101.x/sdwan/nitro/v1/config_editor/sites
 
 {"sites": {
       "site_location":"shanghai",
@@ -40,7 +40,7 @@ return value：
 
 4.	config interface group：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config_editor/interface_groups
+Post https://220.x.101.x/sdwan/nitro/v1/config_editor/interface_groups
 
 {"interface_groups": {
       "eth_interfaces":["1/2"],
@@ -63,7 +63,7 @@ return value：
 
 5.	config virtual ip：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses
+Post https://220.x.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses
 
 {"virtual_ip_addresses": {
       "virtual_interface_name":"wan",
@@ -80,7 +80,7 @@ return value：
 
 6.	show virtual ip：
 
-Get https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1
+Get https://220.x.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1
 
 return value：
  ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/6.png)
@@ -88,7 +88,7 @@ return value：
  
 7.	delete virtual ip：
 
-Delete https://220.248.101.51/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1,id=917
+Delete https://220.x.101.51/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1,id=917
 
 return value：
  ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/7.png)
@@ -96,7 +96,7 @@ return value：
 
 8.	config wan link：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config_editor/wan_links
+Post https://220.x.101.x/sdwan/nitro/v1/config_editor/wan_links
 
 {"wan_links": {
          "wan_link_name":"shanghai-internet",
@@ -123,7 +123,7 @@ return value：
 
 9.	config static route：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config_editor/routes
+Post https://220.x.101.x/sdwan/nitro/v1/config_editor/routes
 
 {"routes": {
       "network_ip_address":"10.0.0.0/24",
@@ -142,7 +142,7 @@ return value：
 
 10.	export config：
 
-Post https://220.248.101.x/sdwan/nitro/v1/config/config_package_export
+Post https://220.x.101.x/sdwan/nitro/v1/config/config_package_export
 
 {"config_package_export": {
       "package_name":"test1"
@@ -153,7 +153,7 @@ return value：
 
 11.	verify config：
 
-Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=verify
+Post https:// 220.x.101.x/sdwan/nitro/v1/config/change_management?action=verify
 
 { 
     "change_management": {}
@@ -161,7 +161,7 @@ Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=verif
 
 12.	change management config：
 
-Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=stage
+Post https:// 220.x.101.x/sdwan/nitro/v1/config/change_management?action=stage
 
 { 
     "change_management": {}
@@ -169,7 +169,7 @@ Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=stage
 
 13.	activate config：
 
-Post https:// 220.248.101.x/sdwan/nitro/v1/config/change_management?action=activate
+Post https:// 220.x.101.x/sdwan/nitro/v1/config/change_management?action=activate
 
 { 
     "change_management": {}
