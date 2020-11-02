@@ -2,3 +2,4 @@
 citrix sd-wan api automately config
 All test return value with tools is Postman
 use postman post and check config with sd-wan
+all return value picture in / flow the number 
