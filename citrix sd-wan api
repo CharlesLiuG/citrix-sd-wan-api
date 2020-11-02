@@ -8,7 +8,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config/login
 }
 
 return value：
- 
+![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/1.png)
 
 2.	config package：
 Post https://220.248.101.x/sdwan/nitro/v1/config/config_packages
@@ -19,7 +19,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config/config_packages
 }
 
 return value：
- 
+![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/2.png)
 
 3. Config Site：
 
@@ -35,6 +35,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config_editor/sites
 }
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/3.png)
  
 
 4.	config interface group：
@@ -57,6 +58,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config_editor/interface_groups
 }
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/4.png)
  
 
 5.	config virtual ip：
@@ -73,6 +75,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses
 }
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/5.png)
  
 
 6.	show virtual ip：
@@ -80,6 +83,7 @@ return value：
 Get https://220.248.101.x/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/6.png)
 
  
 7.	delete virtual ip：
@@ -87,6 +91,7 @@ return value：
 Delete https://220.248.101.51/sdwan/nitro/v1/config_editor/virtual_ip_addresses/package_name=test1,id=917
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/7.png)
  
 
 8.	config wan link：
@@ -113,6 +118,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config_editor/wan_links
 }
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/8.png)
  
 
 9.	config static route：
@@ -131,6 +137,7 @@ Post https://220.248.101.x/sdwan/nitro/v1/config_editor/routes
 }
 
 return value：
+ ![image](https://github.com/CharlesLiuG/citrix-sd-wan-api/blob/main/9.png)
  
 
 10.	export config：
